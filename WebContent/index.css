@@ -1,6 +1,16 @@
 @charset "UTF-8";
 
+.container{
+	height:500px;
+	weight:700px;
+	background-color: #80ffff;
+	text-align: center;
+}
 h1{
 	color: red;
+	text-align: center;
+}
+
+.form{
 	text-align: center;
 }
