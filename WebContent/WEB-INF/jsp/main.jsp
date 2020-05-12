@@ -6,7 +6,7 @@ User loginUser = (User)session.getAttribute("loginUser");
 %>
 <!DOCTYPE html>
 <html>
-<link href="${pageContext.request.contextPath}/css/main.css" rel="stylesheet" type="text/css" media="all">
+<link href="${pageContext.request.contextPath}/css/main.css" rel="stylesheet"  media="all">
 <head>
 <meta charset="UTF-8">
 <title>ツブヤキ</title>

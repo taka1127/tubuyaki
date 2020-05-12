@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<link href="${pageContext.request.contextPath}/css/logout.css" rel="stylesheet" type="text/css" media="all">
+<link href="${pageContext.request.contextPath}/css/logout.css" rel="stylesheet" media="all">
 <head>
 <meta charset="UTF-8">
 <title>ツブヤキ</title>
