@@ -19,25 +19,35 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/Main")
 public class Main extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-     
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		ServletContext application = this.getServletContext();
-		List<Mutter> mutterList = (List<Mutter>)application.getAttribute("mutterList");
-		
-		if(mutterList == null) {
+		List<Mutter> mutterList = (List<Mutter>) application.getAttribute("mutterList");
+
+		if (mutterList == null) {
 			mutterList = new ArrayList<>();
 			application.setAttribute("mutterList", mutterList);
 		}
-		
+
 		HttpSession session = request.getSession();
-		User loginUser = (User)session.getAttribute("loginUser");
-		
-		if(loginUser == null) {
+		User loginUser = (User) session.getAttribute("loginUser");
+
+		if (loginUser == null) {
 			response.sendRedirect("/tubuyaki/");
-		}else {
+		} else {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/main.jsp");
-			dispatcher.forward(request, response);}
+			dispatcher.forward(request, response);
+		}
+	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		request.setCharacterEncoding("UTF-8");
+		String text = request.getParameter("text");
+
 	}
 
 }
