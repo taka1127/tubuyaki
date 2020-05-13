@@ -16,5 +16,6 @@
 <input type = "submit" value = "ログイン">
 </form>
 </div>
+<jsp:include page="/footer.jsp"></jsp:include>
 </body>
 </html>
